@@ -22,7 +22,7 @@ This repository houses the code for a highly interactive website clone of the (h
 
 **Getting Started:**
 
-1. Clone the repository: `git clone https://github.com/your-username/iphone-15-pro-clone.git`
+1. Clone the repository: `git clone https://github.com/abdullah1904/Apple-Website-Clone.git`
 2. Install dependencies: `npm install`
 3. Start the development server: `npm start`
 
