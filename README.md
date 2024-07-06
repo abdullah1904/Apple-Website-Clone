@@ -1,29 +1,30 @@
-## Highly Interactive iPhone 15 Pro Website Clone (React, TypeScript, GSAP, Three.js)
+# React + TypeScript + Vite
 
-This repository houses the code for a highly interactive website clone of the (hypothetical) iPhone 15 Pro, built using React, TypeScript, Tailwind CSS, GSAP, and Three.js. 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-**Project Goals:**
+Currently, two official plugins are available:
 
-* **Solidify React Skills:**  This project aimed to solidify my understanding of React best practices, including component-based architecture, state management, and efficient code organization for larger applications.
-* **Explore Animation Libraries:** Integrate GSAP and Three.js to create a visually engaging and interactive user experience with smooth, performant animations.
-* **Modern Design Approach:** Utilize Tailwind CSS to achieve a clean, modern, and responsive design aesthetic that adheres to current web design trends.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-**Technical Stack:**
+## Expanding the ESLint configuration
 
-* Frontend: React, TypeScript
-* Styling: Tailwind CSS
-* Animations: GSAP, Three.js
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-**Key Features:**
+- Configure the top-level `parserOptions` property like this:
 
-* Interactive elements that showcase the potential functionalities of the iPhone 15 Pro.
-* Smooth and performant animations powered by GSAP and Three.js.
-* Clean and responsive design achieved with Tailwind CSS.
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+```
 
-**Getting Started:**
-
-1. Clone the repository: `git clone https://github.com/abdullah1904/Apple-Website-Clone.git`
-2. Install dependencies: `npm install`
-3. Start the development server: `npm start`
-
-**Feel free to explore the codebase and leave any feedback or suggestions!**
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
